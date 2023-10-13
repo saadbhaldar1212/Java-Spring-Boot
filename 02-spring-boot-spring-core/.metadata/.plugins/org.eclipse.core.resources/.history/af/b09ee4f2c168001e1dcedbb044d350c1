@@ -1,0 +1,8 @@
+package com.tutorial.spring_core_demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class CricketCoach implements Coach{
+
+}
