@@ -10,9 +10,10 @@ public class RestController {
 	
 	private Coach myCoach;
 	
+	// Setter Injection
 	@Autowired
-	public RestController(Coach theCoach) {
-		myCoach = theCoach;
+	public void setMyCoach(Coach myCoach) {
+		this.myCoach = myCoach;
 	}
 	
 	@GetMapping("/dailyWorkout")
