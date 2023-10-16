@@ -23,11 +23,24 @@ public class CrudDemoApplication {
 			// Create
 //			createStudent(studentDao);
 			
-			//Read
+			// Read
 //			findById(studentDao);
 //			findAllStudents(studentDao);
-			findByLastName(studentDao);
+//			findByLastName(studentDao);
+			
+			// Update
+			updateStudent(studentDao);
 		};
+	}
+
+	private void updateStudent(StudentDao studentDao) {
+		int id = 1;
+		Student myStudent = studentDao.findById(id);
+		
+		myStudent.setFirstName("Ramzan");
+		studentDao.update(myStudent);
+		
+		System.out.println("Updated successfully");
 	}
 
 	private void findByLastName(StudentDao studentDao) {

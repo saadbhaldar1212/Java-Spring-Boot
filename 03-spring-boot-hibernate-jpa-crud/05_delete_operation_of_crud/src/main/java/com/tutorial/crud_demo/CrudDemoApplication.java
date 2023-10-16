@@ -23,11 +23,40 @@ public class CrudDemoApplication {
 			// Create
 //			createStudent(studentDao);
 			
-			//Read
+			// Read
 //			findById(studentDao);
 //			findAllStudents(studentDao);
-			findByLastName(studentDao);
+//			findByLastName(studentDao);
+			
+			// Update
+//			updateStudent(studentDao);
+			
+			// Delete
+//			deleteStudent(studentDao);
+//			deleteAll(studentDao);
 		};
+	}
+
+	private void deleteAll(StudentDao studentDao) {
+		int numOfRows = studentDao.deleteAll();
+		System.out.println(numOfRows + " Rows affected");
+	}
+
+	private void deleteStudent(StudentDao studentDao) {
+		int id = 1;
+		
+		studentDao.delete(id);
+		System.out.println("Deleted successfully where s_id = " + id);
+	}
+
+	private void updateStudent(StudentDao studentDao) {
+		int id = 1;
+		Student myStudent = studentDao.findById(id);
+		
+		myStudent.setFirstName("Ramzan");
+		studentDao.update(myStudent);
+		
+		System.out.println("Updated successfully");
 	}
 
 	private void findByLastName(StudentDao studentDao) {
