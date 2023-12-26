@@ -17,14 +17,14 @@
 		First Name: <input type="text" th:field="*{firstName}" /> 
 		
 		<!-- Add error message if present -->
-		<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="errors" />
+		<span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="errors" />
 		
 		<br><br>
 		
 		Last Name (*): <input type="text" th:field="*{lastName}" /> 
 		
 		<!-- Add error message if present -->
-		<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="errors" />
+		<span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="errors" />
 		
 		<br><br>
 		
