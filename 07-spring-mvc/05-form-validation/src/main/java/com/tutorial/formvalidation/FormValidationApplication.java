@@ -1,13 +1,13 @@
-package com.tutorial.thymeleafspringboot;
+package com.tutorial.formvalidation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ThymeleafSpringbootApplication {
+public class FormValidationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ThymeleafSpringbootApplication.class, args);
+		SpringApplication.run(FormValidationApplication.class, args);
 	}
 
 }

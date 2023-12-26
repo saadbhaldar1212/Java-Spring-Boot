@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Customer Confirmation</title>
+</head>
+
+<body>
+	<p th:text="'First Name' + ${customer.getFirstName()}" />
+	<p th:text="'Last Name' + ${customer.getLastName()} " />
+</body>
+
+</html>

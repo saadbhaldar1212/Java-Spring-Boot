@@ -1,10 +1,10 @@
-package com.tutorial.thymeleafspringboot;
+package com.tutorial.formvalidation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ThymeleafSpringbootApplicationTests {
+class FormValidationApplicationTests {
 
 	@Test
 	void contextLoads() {

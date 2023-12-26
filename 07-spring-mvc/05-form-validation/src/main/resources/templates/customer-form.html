@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Form Validation</title>
+	
+	<style>
+		.errors {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<form th:action="@{/processCustomerForm}" th:object="${customer}" method="POST">
+		First Name: <input type="text" th:field="*{firstName}" /> 
+		
+		<!-- Add error message if present -->
+		<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="errors" />
+		
+		<br><br>
+		
+		Last Name (*): <input type="text" th:field="*{lastName}" /> 
+		
+		<!-- Add error message if present -->
+		<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="errors" />
+		
+		<br><br>
+		
+		<button type="submit">Submit</button>
+	</form>
+
+</body>
+
+</html>
