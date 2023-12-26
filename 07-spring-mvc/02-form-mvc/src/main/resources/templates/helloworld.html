@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+	<head>
+		<title>
+			Thymelead Form Demo
+		</title>
+	</head>
+	
+	<body>
+		<p th:text="'Your name is: ' + ${param.myName}"/>
+		<a th:href="@{/showForm}">Go Back</a>
+	</body>
+</html>

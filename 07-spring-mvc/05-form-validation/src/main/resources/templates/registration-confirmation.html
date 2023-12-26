@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Registration Confirmation</title>
+</head>
+<body>
+	<p th:text="'First name: ' + ${registration.firstName}" />
+	<p th:text="'Last Name: ' + ${registration.lastName}" />
+	
+	<p th:text="'Country: ' + ${registration.country}" />
+	
+	<p th:text="'Favourite Programming Language: ' + ${registration.favouriteProgrammingLanguage}" />
+	
+	Hobbies: <ul>
+		<li th:each="myHobby: ${registration.hobbies}" th:text="${myHobby}" />
+	</ul>
+	
+</body>
+</html>

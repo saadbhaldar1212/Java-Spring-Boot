@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Registration Form</title>
+</head>
+
+<body>
+	<h3>
+		Registration Form
+	</h3>
+	<form th:action="@{/processRegistrationForm}" th:object="${registration}" method="POST">
+		First name: <input type="text" th:field="*{firstName}" required /><br><br>
+		Last name: <input type="text" th:field="*{lastName}" required /><br><br>
+
+		<!-- Iterating over a Drop-down list -->
+		Country: <select th:field="*{country}">
+			<option th:each="country: ${countries}" th:value="${country}" th:text="${country}" />
+		</select><br><br>
+
+		<!-- Iterating over a Radio-Button list -->
+		Favourite Programming Language:
+		<input type="radio" th:field="*{favouriteProgrammingLanguage}"
+			th:each="favouriteProgrammingLanguage: ${favouriteProgrammingLanguages}"
+			th:value="${favouriteProgrammingLanguage}" th:text="${favouriteProgrammingLanguage}" /><br><br>
+
+		<!-- Iterating over a Checkbox list -->
+		Hobbies: 
+		<input type="checkbox" th:field="*{hobbies}" th:each="myHobbies: ${hobbies}" th:value="${myHobbies}"
+			th:text="${myHobbies}" /><br><br>
+
+		<button type="submit">Submit</button>
+	</form>
+</body>
+
+</html>
