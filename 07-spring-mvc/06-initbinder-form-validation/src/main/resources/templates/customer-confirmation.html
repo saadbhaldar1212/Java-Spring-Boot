@@ -6,8 +6,9 @@
 </head>
 
 <body>
-	<p th:text="'First Name' + ${customer.getFirstName()}" />
-	<p th:text="'Last Name' + ${customer.getLastName()} " />
+	<p th:text="'First Name: ' + ${customer.getFirstName()}" />
+	<p th:text="'Last Name: ' + ${customer.getLastName()} " />
+	<p th:text="'Number of free passes: ' + ${customer.getFreePasses()} " />
 </body>
 
 </html>
