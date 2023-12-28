@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Customer Confirmation</title>
+</head>
+
+<body>
+	<p th:text="'First Name: ' + ${customer.getFirstName()}" />
+	<p th:text="'Last Name: ' + ${customer.getLastName()} " />
+	<p th:text="'Number of free passes: ' + ${customer.getFreePasses()} " />
+	<p th:text="'Postal code: ' + ${customer.getPostalCode()} " />
+	<p th:text="'Course code: ' + ${customer.getCourseCode()} " />
+</body>
+
+</html>
