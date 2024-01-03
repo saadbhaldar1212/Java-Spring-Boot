@@ -1,7 +1,0 @@
-package com.tutorial.util;
-
-public interface Coach {
-	
-	String getDailyWorkout();
-
-}
